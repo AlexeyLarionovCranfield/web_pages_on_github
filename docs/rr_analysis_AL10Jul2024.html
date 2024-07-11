@@ -1576,7 +1576,7 @@ Some of the packages are not used in this analysis.</p>
 <div id="time-stamp-initial-clean-up" class="section level2">
 <h2>Time stamp &amp; initial clean-up</h2>
 <pre class="r"><code>date()</code></pre>
-<pre><code>## [1] &quot;Wed Jul 10 19:10:22 2024&quot;</code></pre>
+<pre><code>## [1] &quot;Thu Jul 11 23:11:53 2024&quot;</code></pre>
 <pre class="r"><code>rm(list=ls())
 graphics.off()</code></pre>
 </div>
@@ -2029,13 +2029,15 @@ rm(alpha_richness.df)</code></pre>
 confirming that alpha diversity changes depending on the land use. The
 mixed models will not be used for the final analysis of alpha
 diversity.</p>
-<p>However, mixed models may be needed later for testing differences in
-the soil community composition (in adonis2). So, we explore possible
-mixed models in this section just to select the design that might be
-used later.</p>
-<p>Unfortunately, adonis2 does not accept the lme4 syntax. So, we will
-have to achieve similar design by using restricted permutations and/or
-when calculating the distances.</p>
+<p>However, mixed models may be better suited for RestREco design
+account for uncertainty between the replicas within each site:</p>
+<p><a href="https://www.modernstatisticswithr.com/regression.html#mixedmodels" class="uri">https://www.modernstatisticswithr.com/regression.html#mixedmodels</a></p>
+<p>Mixed models with lme4 could be applied to pH and conductivity
+analysis.</p>
+<p>Later we may also apply mixed models to soil community composition.
+However, adonis2 does not accept the lme4 syntax. So, we will need to
+consider using restricted permutations and modifying the distances
+calculations instead of using the extended R formula syntax?</p>
 <p><strong>Compare mixed models using syntax as implemented in lme4
 package</strong></p>
 <pre class="r"><code>library(lme4)
@@ -2469,10 +2471,12 @@ have significant effect on the microbial community: the
 factor into the total variance of the microbial communities.</p>
 </div>
 </div>
-<div id="additional-optional-reading-about-nested-designs-and-restricted-permutations-in-r" class="section level2">
-<h2>Additional optional reading about nested designs and restricted
+<div id="some-references-about-mixed-models-nested-designs-and-restricted-permutations-in-r" class="section level2">
+<h2>Some references about mixed models, nested designs and restricted
 permutations in R</h2>
-<p><strong><em>Reference about the significance in
+<p><strong><em>Introduction to mixed modelling in R (lme4)
+</em></strong></p>
+<p><strong><em>Reference about calculating significance in
 lme4/lmer</em></strong></p>
 <p><a href="https://stats.stackexchange.com/questions/22988/how-to-obtain-the-p-value-check-significance-of-an-effect-in-a-lme4-mixed-mode" class="uri">https://stats.stackexchange.com/questions/22988/how-to-obtain-the-p-value-check-significance-of-an-effect-in-a-lme4-mixed-mode</a></p>
 <p><strong><em>Refresher about nested designs</em></strong></p>
@@ -2785,7 +2789,7 @@ microbial community in RestREco dataset.</p>
 ## [125] cachem_1.0.8                    rhdf5_2.46.1                    stringr_1.5.1                   rootSolve_1.8.2.4               vipor_0.4.7                     parallel_4.3.1                  foreign_0.8-86                  pillar_1.9.0                    grid_4.3.1                      vctrs_0.6.5                     BiocSingular_1.18.0             beachmat_2.18.1                 cluster_2.1.6                   beeswarm_0.4.0                  htmlTable_2.4.2                 evaluate_0.23                   mvtnorm_1.2-4                   cli_3.6.1                       compiler_4.3.1                  rlang_1.1.1                     crayon_1.5.2                    rngtools_1.5.2                  labeling_0.4.3                  ggbeeswarm_0.7.2                plyr_1.8.9                      fs_1.6.4                        stringi_1.8.3                   viridisLite_0.4.2               BiocParallel_1.36.0             munsell_0.5.1                   Biostrings_2.70.3              
 ## [156] gsl_2.1-8                       lazyeval_0.2.2                  NADA_1.6-1.1                    sparseMatrixStats_1.14.0        bit64_4.0.5                     Rhdf5lib_1.24.2                 SummarizedExperiment_1.32.0     highr_0.10                      rbibutils_2.2.16                igraph_2.0.3                    memoise_2.0.1                   bslib_0.7.0                     bit_4.0.5                       readxl_1.4.3                    ape_5.8</code></pre>
 <pre class="r"><code>date()</code></pre>
-<pre><code>## [1] &quot;Wed Jul 10 19:14:06 2024&quot;</code></pre>
+<pre><code>## [1] &quot;Thu Jul 11 23:17:07 2024&quot;</code></pre>
 </div>
 
 
