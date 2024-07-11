@@ -19,7 +19,7 @@ In short (after you sorted out the GitHUb credentials and can push to your GitHu
 After all is done, the page should be accessible at address  
 https://AlexeyLarionovCranfield.github.io/web_pages_on_github/analysis.html  
 
-Note <u>username.**github.io**/repository/file_name</u> address format.  
+Note <ins>username.**github.io**/repository/file_name</ins> address format.  
 
 If you put **index.html** file into your */docs* folder, it will be opened if browser accesses this address:  
 https://AlexeyLarionovCranfield.github.io/web_pages_on_github  
