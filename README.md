@@ -1,9 +1,9 @@
-**Hosting static web site / web pages on a GitHub project repository**  
+# Hosting static web site / web pages on a GitHub project repository
 
 *AL11Jul2024*
 
 Html pages placed directly on GitHub are not rendered for browsing.  Instead, they are shown as text files, if accessed in the browser:  
-https://github.com/AlexeyLarionovCranfield/test_01/Analysis.html  
+https://github.com/alexeylarionovcranfield/test_01/Analysis.html  
 To make a proper web site/ web page, which would be shown properly in a browser, you need to use GitHub Pages in your project.  
 
 In short (after you sorted out the credentials and can push to your GitHub repository):  
@@ -16,6 +16,7 @@ In short (after you sorted out the credentials and can push to your GitHub repos
 
 After all is updated, the page should be accessible at address  
 https://alexeylarionovcranfield.github.io/test_01/Analysis.html  
+Note .../<username>.github.io/<repository>/... address syntax.  
 
 You may read more about GitHub Pages at https://pages.github.com/  
 
