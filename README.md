@@ -6,7 +6,7 @@
 Instead, they are either shown as text files, or not shown at all if accessed in the browser:  
 https://github.com/AlexeyLarionovCranfield/web_pages_on_github/analysis.html  
 
-To host a web site/ web page on GitHub, in a way that the HTML page could be properly seen in a browser, you need to use **GitHub Pages** in your project.  
+To host a web site/ web page on GitHub, in a way that the HTML page could be properly rendered in a browser, you need to use **GitHub Pages** in your project.  
 
 In short (after you sorted the GitHUb credentials and can push to your GitHub repository):  
 1) Make **docs** folder in your project folder, place your HTML file there, push changes into the GitHub repository.  
